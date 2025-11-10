@@ -81,7 +81,7 @@ abstract class ezcWorkflowNodeConditionalBranch extends ezcWorkflowNodeBranch
      * @param ezcWorkflowNode      $else
      * @return ezcWorkflowNode
      */
-    public function addConditionalOutNode( ezcWorkflowCondition $condition, ezcWorkflowNode $outNode, ezcWorkflowNode $else = null )
+    public function addConditionalOutNode( ezcWorkflowCondition $condition, ezcWorkflowNode $outNode, ?ezcWorkflowNode $else = null )
     {
         $this->addOutNode( $outNode );
         $this->configuration['condition'][ezcWorkflowUtil::findObject( $this->outNodes, $outNode )] = $condition;

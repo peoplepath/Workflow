@@ -546,7 +546,7 @@ abstract class ezcWorkflowNode implements ezcWorkflowVisitable
      * @param int $threadId
      * @ignore
      */
-    public function activate( ezcWorkflowExecution $execution, ezcWorkflowNode $activatedFrom = null, $threadId = 0 )
+    public function activate( ezcWorkflowExecution $execution, ?ezcWorkflowNode $activatedFrom = null, $threadId = 0 )
     {
         if ( $this->activationState === self::WAITING_FOR_ACTIVATION )
         {

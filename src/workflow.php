@@ -89,7 +89,7 @@ class ezcWorkflow implements Countable, ezcWorkflowVisitable
      *                                            that is executed when a workflow
      *                                            execution is cancelled.
      */
-    public function __construct( $name, ezcWorkflowNodeStart $startNode = null, ezcWorkflowNodeEnd $endNode = null, ezcWorkflowNodeFinally $finallyNode = null )
+    public function __construct( $name, ?ezcWorkflowNodeStart $startNode = null, ?ezcWorkflowNodeEnd $endNode = null, ?ezcWorkflowNodeFinally $finallyNode = null )
     {
         $this->name = $name;
 

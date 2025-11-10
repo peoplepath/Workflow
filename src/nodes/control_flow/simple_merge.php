@@ -84,7 +84,7 @@ class ezcWorkflowNodeSimpleMerge extends ezcWorkflowNodeMerge
      * @param int $threadId
      * @ignore
      */
-    public function activate( ezcWorkflowExecution $execution, ezcWorkflowNode $activatedFrom = null, $threadId = 0 )
+    public function activate( ezcWorkflowExecution $execution, ?ezcWorkflowNode $activatedFrom = null, $threadId = 0 )
     {
         $parentThreadId = $execution->getParentThreadId( $threadId );
 

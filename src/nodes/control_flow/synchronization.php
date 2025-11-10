@@ -52,7 +52,7 @@ class ezcWorkflowNodeSynchronization extends ezcWorkflowNodeMerge
      * @param int $threadId
      * @ignore
      */
-    public function activate( ezcWorkflowExecution $execution, ezcWorkflowNode $activatedFrom = null, $threadId = 0 )
+    public function activate( ezcWorkflowExecution $execution, ?ezcWorkflowNode $activatedFrom = null, $threadId = 0 )
     {
         $this->prepareActivate( $execution, $threadId );
         parent::activate( $execution, $activatedFrom, $execution->getParentThreadId( $threadId ) );

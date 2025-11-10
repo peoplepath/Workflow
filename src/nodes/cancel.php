@@ -63,7 +63,7 @@ class ezcWorkflowNodeCancel extends ezcWorkflowNodeEnd
      * @param int                  $threadId
      * @ignore
      */
-    public function activate( ezcWorkflowExecution $execution, ezcWorkflowNode $activatedFrom = null, $threadId = 0 )
+    public function activate( ezcWorkflowExecution $execution, ?ezcWorkflowNode $activatedFrom = null, $threadId = 0 )
     {
         $execution->cancel( $this );
     }

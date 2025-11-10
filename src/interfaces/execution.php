@@ -396,7 +396,7 @@ abstract class ezcWorkflowExecution
      *
      * @param ezcWorkflowNode $node
      */
-    public function cancel( ezcWorkflowNode $node = null )
+    public function cancel( ?ezcWorkflowNode $node = null )
     {
         if ( $node !== null )
         {
@@ -431,7 +431,7 @@ abstract class ezcWorkflowExecution
      * @param ezcWorkflowNode $node
      * @ignore
      */
-    public function end( ezcWorkflowNode $node = null )
+    public function end( ?ezcWorkflowNode $node = null )
     {
         if ( !$this->cancelled )
         {
