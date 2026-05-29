@@ -76,12 +76,12 @@ class ezcWorkflowVisitor implements Countable
     {
         if ( $visitable instanceof ezcWorkflowNode )
         {
-            if ( $this->visited->contains( $visitable ) )
+            if ( $this->visited->offsetExists( $visitable ) )
             {
                 return false;
             }
 
-            $this->visited->attach( $visitable );
+            $this->visited->offsetSet( $visitable );
         }
 
         $this->doVisit( $visitable );
